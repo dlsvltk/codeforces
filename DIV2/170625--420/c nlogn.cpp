@@ -20,11 +20,11 @@ int main() {
 			cin >> input;
 			stk.push(input);
 			top = input;
-		}//¸ÂÀ½
+		}//ë§ìŒ
 		else {
 			if (top == cnt) {
 				cnt++;
-				if (stk.empty()) {//¸Â¾Ò´Âµ¥ pq°ªÀÌ¾úÀ½
+				if (stk.empty()) {//ë§ì•˜ëŠ”ë° pqê°’ì´ì—ˆìŒ
 					pq.pop();
 					if (pq.empty()) {
 						top = -1;
@@ -33,9 +33,9 @@ int main() {
 						top = pq.top();
 					}
 				}
-				else {//¸Â¾Ò´Âµ¥ ½ºÅÃ°ªÀÌ¾úÀ½
+				else {//ë§ì•˜ëŠ”ë° ìŠ¤íƒê°’ì´ì—ˆìŒ
 					stk.pop();
-					if (stk.empty()) {//½ºÅÃ°ªÀÌ ¾ø¾î
+					if (stk.empty()) {//ìŠ¤íƒê°’ì´ ì—†ì–´
 						if (pq.empty()) {
 							top = -1;
 						}
@@ -43,12 +43,12 @@ int main() {
 							top = pq.top();
 						}
 					}
-					else {//½ºÅÃ°ªÀÌ ÀÖ¾î
+					else {//ìŠ¤íƒê°’ì´ ìˆì–´
 						top = stk.top();
 					}
 				}
 			}
-			else {//ÀÀ Æ²·È¾î
+			else {//ì‘ í‹€ë ¸ì–´
 				result++;
 				cnt++;
 				while (!stk.empty()) {
