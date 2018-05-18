@@ -39,7 +39,7 @@ int main(){
 	for (int i = 1; i < n; ++i){
 		for (int j = i; j < n; ++j){
 			if (s[j][n] == 1){
-				s[j][n] = (a[j - 1] == 0);
+				s[j][n] = (a[j - i] == 0);
 				s[j][p[j - i]] = 1;
 			}
 			else if (a[j-i] != 0 && s[j][p[j-i]] == 0){
